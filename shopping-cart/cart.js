@@ -19,7 +19,7 @@ function addItem(cart, item) {
 }
 //function to remove item
 function removeItem(cart, name) {
-    if (cart == null   ) return 'Enter Cart/Item';
+    if (cart == null) return 'Enter Cart/Item';
     const index = cart.findIndex(item => item.name === name);
     if(index < 0) return "Item not found"
     cart.splice(index, 1)
@@ -27,7 +27,7 @@ function removeItem(cart, name) {
 }
 //function to get total items
 function getTotalItems(cart) {
-    
+    if (cart == null) return 'Enter Cart Details'; 
     return  cart.length; 
 
 }

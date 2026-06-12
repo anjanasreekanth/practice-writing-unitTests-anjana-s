@@ -6,7 +6,7 @@ ts.addItem(cart, { name: "Eggs", quantity: 1 })
 
 test("should be able to add items to cart", () =>{
     expect(ts.addItem(cart, { name: "Milk", quantity: 1 })).toBe("Item Added To the Cart");
-   
+    expect(ts.getTotalItems(cart)).toBe(2); //test case for get total items
 
 })
  
@@ -45,7 +45,14 @@ test("should not be able to add items to cart without quantity", () =>{
 test("should be pass cart or item  name to remove ", () =>{
     expect(ts.removeItem(null, "Eggs")).toBe("Enter Cart/Item")
      expect(ts.removeItem(cart, null)).toBe("Item not found")
-      expect(ts.getTotalItems(cart)).toBe(1);
+      
  })
  
+//Get Item count test cases
+test("should display total cart items", () =>{
+    expect(ts.getTotalItems(cart)).toBe(1); //test case for get total items
 
+})
+test("should display total cart items", () =>{
+    expect(ts.getTotalItems( )).toBe("Enter Cart Details"); //test case for get total items
+})
